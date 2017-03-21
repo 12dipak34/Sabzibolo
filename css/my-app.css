@@ -1,0 +1,105 @@
+body{
+    font-family: 'Lato', sans-serif!important;
+}
+.navbar, .subnavbar, .toolbar{
+	color: #fff!important;
+	background-color: #063E57!important;
+}
+.slider-header{
+    font-size: 12px!important;
+}
+.slider-contant{
+    font-size: 10px!important;
+}
+.carousel-indicators{
+    bottom: 0px!important;
+}
+.carousel-caption{
+    padding-bottom: 10px!important;
+}
+
+
+.tabbar a.tab-link.active, .tabbar a.tab-link.active-state, html:not(.watch-active-state) .tabbar a.tab-link:active{
+    color: #fff;
+    text-decoration: none;
+    background: #06364c;
+}
+.toolbar-inner>a:focus, .toolbar-inner>a:hover{
+    color: #fff!important;
+    text-decoration: none!important;
+}
+/* custom left panel */
+.custom-panel{
+    color: #fff;
+    background-color: #063E57!important;    
+}
+.custom-a{
+    color: #fff!important;
+}
+.logo{
+    color: #8AB7BD!important;
+    text-decoration: none!important;
+}
+.page_title{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.menucolor{
+    color: #8AB7BD!important;
+}
+.sidemenu>li a{
+    color: #8AB7BD!important;
+}
+.sidemenu>li>a:hover{
+    text-decoration: none!important;
+}
+.list-block .item-media{
+    max-width: none!important;
+}
+.list-block .item-link .item-inner{
+    padding-right: 0px!important;    
+}
+.list-block .item-media+.item-inner{
+    margin-left: 0px!important;
+}
+.tabbar a.link, .tabbar a.tab-link{
+    font-size:12px!important;
+    text-transform: capitalize;
+    color: #fff!important;
+    
+}
+.orange_color{
+    color: orange!important;
+}
+.theme_color{
+    color: #06364c!important;
+}
+.red_color{
+    color: red!important;
+}
+.badge{
+  /*  position: absolute;
+    top: -3px;
+    right: -10px;
+    font-size: 10px;
+    font-weight: 400;*/
+    background-color: orange!important;
+}
+.panel{
+    border-radius: 0px!important;
+}
+
+
+
+/*
+.navbar-fixed .toolbar, .navbar-through .toolbar{
+    top: 0px!important;
+}
+.navbar-fixed .tabbar-fixed .page-content, .navbar-fixed .toolbar-fixed .page-content, .navbar-fixed.tabbar-fixed .page-content, .navbar-fixed.toolbar-fixed .page-content, .navbar-through .tabbar-fixed .page-content, .navbar-through .toolbar-fixed .page-content, .navbar-through.tabbar-fixed .page-content, .navbar-through.toolbar-fixed .page-content, .tabbar-fixed .navbar-fixed .page-content, .tabbar-fixed .navbar-through .page-content, .toolbar-fixed .navbar-fixed .page-content, .toolbar-fixed .navbar-through .page-content{
+    padding-top: 30px!important;
+}
+
+.carousel {
+    top: 56px;
+}
+*/

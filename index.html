@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sabzibolo</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    
+    <!-- framework7 -->
+    <link rel="stylesheet" href="css/framework7.material.min.css"/>
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css"/>
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css"/>
+    <!-- jquery -->  
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!-- bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!-- ionicons CSS -->
+    <link rel="stylesheet" href="css/ionicons.min.css"/>
+</head>
+
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal custom-panel">
+      <div class="content-block menucolor">
+        <h4><a href="#" class="close-panel custom-a menucolor"><i class="fa fa-angle-double-left"></i> Navigation</a></h4>        
+        
+        <div class="list-block">
+        <ul class="sidemenu">
+            <li><a href="#about" class="item-link close-panel">
+            <div class="item-content">
+            <div class="item-media"><i class="ion ion-person"></i></div>
+            <div class="item-inner">
+            <div class="item-title">Profile</div>
+            </div>
+            </div>
+            </a></li>
+            <li><a href="#myorder" class="item-link close-panel">
+            <div class="item-content">
+            <div class="item-media"><i class="ion ion-bag"></i></div>
+            <div class="item-inner">
+            <div class="item-title">My orders</div>
+            </div>
+            </div>
+            </a></li>
+            <li><a href="#changepass" class="item-link close-panel">
+            <div class="item-content">
+            <div class="item-media"><i class="fa fa-lock"></i></div>
+            <div class="item-inner">
+            <div class="item-title">Change password</div>
+            </div>
+            </div>
+            </a></li>
+            <li><a href="#about" class="item-link close-panel">
+            <div class="item-content">
+            <div class="item-media"><i class="ion ion-help-circled"></i></div>
+            <div class="item-inner">
+            <div class="item-title">About us</div>
+            </div>
+            </div>
+            </a></li>
+            <li><a href="#contact" class="item-link close-panel">
+            <div class="item-content">
+            <div class="item-media"><i class="ion ion-android-call"></i></div>
+            <div class="item-inner">
+            <div class="item-title">Contact us</div>
+            </div>
+            </div>
+            </a></li>
+            <li><a href="#logout" class="item-link close-panel">
+            <div class="item-content">
+            <div class="item-media"><i class="ion ion-log-out"></i></div>
+            <div class="item-inner">
+            <div class="item-title">Logout</div>
+            </div>
+            </div>
+            </a></li>
+        </ul>
+        </div>
+        
+        
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <!-- <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>-->
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->            
+            <div class="center sliding"><a href="#" class="open-panel logo"> <i class="fa fa-list"></i></a><a href="#index" class="logo"> Sabzibolo</a></div>            
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <a href="#" class="link icon-only menucolor"> <i class="ion ion-bag"> <i class="badge">2</i></i></a>
+              <a href="#" class="link icon-only open-panel menucolor"> <i class="fa fa-gears "></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block">
+                <div class="row">                  
+                    <script>
+                     $(document).ready(function(){
+                        fatch_items();
+                     });
+                     </script>
+                     <div id="my_items"></div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- About Page-->
+          <div data-page="about" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+              
+                <div class="page_title"><a href="#" class="back">Home</a> <i class="fa fa-angle-double-right"></i><small> About us</small></div>
+                <p>We are a group of farmers, technocrats and IT professionals. This unique business model was conceptualized to benefit customers and farmer by bypassing middlemen. At the same time we are committed to the freshness, pureness and healthiness of our products. We train farmers affiliated to us for minimum use of pesticides and other environment friendly measures like water conservation, judicious use of fertilizers and manure for soil health and biological controls of the pests.</p>
+                <p>We endeavour to provide fresh vegetables from direct farm to the customer. For that we maintain a system among a group of farmers and this website.</p>
+                <p>Commitment from subzibolo.com:
+We are commitment to provide fresh and healthy vegetables to our customers directly from farm through this virtual vegetable store www.sabzibolo.com</p>
+<p>અમે ખેડૂતો, ટેકનોક્રેટ અને આઈ.ટી. પ્રોફેશનલ્સનો એક સમુહ છીએ. આ અજોડ બિઝનેશ મોડલ વચેટીયાઓને દૂર કરી ગ્રાહકો અને ખેડૂતોને ફાયદો કરવા માટે સર્જવામાં આવ્યું છે. સાથે સાથે અમે આમારા ઉત્પાદોની તાજગી, શુધ્ધતા અને તંદુરસ્તી માટે સમર્પીત છીએ. જંતુનાશક દવાઓના લઘુત્તમ ઉપયોગ, અન્ય પર્યાવરણને લાભ કરતા પગલાં જેવાકે પાણીનો બચાવ, જમીનની તંદુરસ્તી માટે રાસાયણીક અને જૈવિક ખાતરોનો સપ્રમાણ ઉપયોગ અને પાક જિવાતોના જૈવિક નિયંત્રણ જેવા પગલાં માટે અમારી સાથે જોડાયેલ ખેડૂતોને તાલીમ આપીએ છીએ.
+ખેડૂતના ખેતરેથી સીધા ગ્રાહક જોડે તાજા શાકભાજી પહોંચાડવાનું અમારુ અભિયાન છે. આ માટે આ વેબસાઈટ www.sabzibolo.com અને ખેડૂતોના સમુહ વચ્ચે એક વ્યવસ્થા અમે જાળવીએ છીએ.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Page-->
+          <div data-page="contact" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+                    <div class="page_title"><a href="#" class="back">Home</a> <i class="fa fa-angle-double-right"></i><small> Contact us</small></div>
+                    <p><strong>Address:</strong></p>
+                    <p>411/4,Gandiv, Sector-29</p>
+                    <p>Gandhinagar-382029,</p>
+                    <p>Gujarat, India.</p>
+                    <p>Phone: 922 800 1188</p>
+                    <p>Working Hours: 9.00am to 6.00pm Monday – Friday.</p>
+                    <div class="col-sm-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14664.0311151964!2d72.659353!3d23.242804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68d8b07714a627a1!2sStar+One+Web!5e0!3m2!1sen!2sin!4v1489667661778" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                    </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Form Page-->
+          <!-- <div data-page="form" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Form Example</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Your name">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-url"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">URL</div>
+                        <div class="item-input">
+                          <input type="url" placeholder="URL">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-password"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Password</div>
+                        <div class="item-input">
+                          <input type="password" placeholder="Password">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-tel"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Phone</div>
+                        <div class="item-input">
+                          <input type="tel" placeholder="Phone">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Gender</div>
+                        <div class="item-input">
+                          <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Birth date</div>
+                        <div class="item-input">
+                          <input type="date" placeholder="Birth day" value="2014-04-30">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Switch</div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-settings"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Slider</div>
+                        <div class="item-input">
+                          <div class="range-slider">
+                            <input type="range" min="0" max="100" value="50" step="0.1">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Textarea</div>
+                        <div class="item-input">
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <div class="row">
+                  <div class="col-50"><a href="#" class="button button-big button-fill color-red">Cancel</a></div>
+                  <div class="col-50">
+                    <input type="submit" value="Submit" class="button button-big button-fill color-green">
+                  </div>
+                </div>
+              </div>
+              <div class="content-block-title">Checkbox group</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Books" checked>
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Books</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Movies">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Movies</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Food">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Food</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Drinks">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Drinks</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block-title">Radio buttons group</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Books" checked>
+                      <div class="item-inner">
+                        <div class="item-title">Books</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Movies">
+                      <div class="item-inner">
+                        <div class="item-title">Movies</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Food">
+                      <div class="item-inner">
+                        <div class="item-title">Food</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Drinks">
+                      <div class="item-inner">
+                        <div class="item-title">Drinks</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <!-- Bottom Toolbar-->
+        <!-- <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div> -->
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/kitchen-sink.js"></script>
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    
+</body>
+
+</html>
