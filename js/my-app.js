@@ -45,7 +45,7 @@ myApp.onPageInit('about', function (page) {
 });
 myApp.onPageInit('index', function (page) {
     // run createContentPage func after link was clicked
-    //fatch_items();
+    fatch_items();
 });
 
 function mysub() {
